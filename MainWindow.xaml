@@ -1,0 +1,44 @@
+﻿<Window x:Class="_002_WPFCountFilesApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_002_WPFCountFilesApp"
+        mc:Ignorable="d"
+        Title="Count File" Height="350" Width="600">
+    <StackPanel>
+        <!--Directory Path-->
+        <TextBlock Text="Directory Path" FontSize="15" FontWeight="Bold" Margin="20 10 0 10"/>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Path TextBox-->
+            <Border BorderThickness="1" BorderBrush="Black" Margin="20 0 0 0">
+                <TextBlock x:Name="pathTB" Grid.Column="0" />
+            </Border>
+            <!--Button Open-->
+            <Button x:Name="openBtn" Grid.Column="1" Content="Open" Margin="20 0 20 0"/>
+        </Grid>
+
+        <!--Format-->
+        <TextBlock Text="File Format" FontSize="15" FontWeight="Bold" Margin="20 10 0 10"/>
+        
+        <!--Format-->
+        <ComboBox x:Name="formatCmb" FontWeight="Bold" Margin="20 0 20 0">
+            <ComboBoxItem Content="*.frm"></ComboBoxItem>
+            <ComboBoxItem Content="*.txt"></ComboBoxItem>
+        </ComboBox>
+        
+        <!--Number of file-->
+        <TextBlock Text="Number of Files:" FontSize="15" FontWeight="Bold" Margin="20 10 0 10"/>
+        
+        <!--Result-->
+        <TextBlock x:Name="resultTB" Text="Result" TextAlignment="Center" FontSize="15" FontWeight="Bold" Margin="20 0 460 10"/>
+        
+        <!--Button-->
+        <Button x:Name="countBtn" Width="100" Content="Count" FontWeight="Bold" Margin="0 30 0 0"/>
+    </StackPanel>
+</Window>

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_002_WPFCountFilesApp"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="Count File" Height="350" Width="600">
     <StackPanel>
         <!--Directory Path-->
@@ -17,10 +18,10 @@
             </Grid.ColumnDefinitions>
             <!--Path TextBox-->
             <Border BorderThickness="1" BorderBrush="Black" Margin="20 0 0 0">
-                <TextBlock x:Name="pathTB" Grid.Column="0" />
+                <TextBlock x:Name="pathTB" Grid.Column="0" FontWeight="Bold" />
             </Border>
             <!--Button Open-->
-            <Button x:Name="openBtn" Grid.Column="1" Content="Open" Margin="20 0 20 0"/>
+            <Button x:Name="openBtn" Click="openBtn_Click" Grid.Column="1" Content="Open" Margin="20 0 20 0"/>
         </Grid>
 
         <!--Format-->
@@ -39,6 +40,6 @@
         <TextBlock x:Name="resultTB" Text="Result" TextAlignment="Center" FontSize="15" FontWeight="Bold" Margin="20 0 460 10"/>
         
         <!--Button-->
-        <Button x:Name="countBtn" Width="100" Content="Count" FontWeight="Bold" Margin="0 30 0 0"/>
+        <Button Click="countBtn_Click" x:Name="countBtn" Width="100" Content="Count" FontWeight="Bold" Margin="0 30 0 0"/>
     </StackPanel>
 </Window>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_002_WPFCountFilesApp"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Count File" Height="350" Width="600">
+        Title="Count File" Height="300" Width="400">
     <StackPanel>
         <!--Directory Path-->
         <TextBlock Text="Directory Path" FontSize="15" FontWeight="Bold" Margin="20 10 0 10"/>
@@ -29,15 +29,13 @@
         
         <!--Format-->
         <ComboBox x:Name="formatCmb" FontWeight="Bold" Margin="20 0 20 0">
-            <ComboBoxItem Content="*.frm"></ComboBoxItem>
-            <ComboBoxItem Content="*.txt"></ComboBoxItem>
         </ComboBox>
         
         <!--Number of file-->
         <TextBlock Text="Number of Files:" FontSize="15" FontWeight="Bold" Margin="20 10 0 10"/>
         
         <!--Result-->
-        <TextBlock x:Name="resultTB" Text="Result" TextAlignment="Center" FontSize="15" FontWeight="Bold" Margin="20 0 460 10"/>
+        <TextBlock x:Name="resultTB" Text="Result" TextAlignment="Center" FontSize="15" FontWeight="Bold" Margin="20 0 200 10"/>
         
         <!--Button-->
         <Button Click="countBtn_Click" x:Name="countBtn" Width="100" Content="Count" FontWeight="Bold" Margin="0 30 0 0"/>
